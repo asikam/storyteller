@@ -51,7 +51,13 @@
                                 <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Text to image</h2>
 
                                 <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    <input type="text" name="toImage" value="" placeholder="Text to image">
+                                    <form method="POST" action="/toImage">
+                                        @csrf
+                                        <input type="text" name="toImage" value="" placeholder="Text to image">
+
+                                        <button type="submit">Go</button>
+                                    </form>
+
                                 </p>
                             </div>
 
@@ -71,7 +77,11 @@
                                 <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Text to speech</h2>
 
                                 <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    <input type="text" name="toSpeech" value="" placeholder="Text to speech">
+                                    <form method="POST" action="/toSpeech">
+                                        @csrf
+                                        <input type="text" name="toSpeech" value="" placeholder="Text to speech">
+                                        <button type="submit">Go</button>
+                                    </form>
                                 </p>
                             </div>
 
